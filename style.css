@@ -1,0 +1,46 @@
+body{
+    background-color: #282828;
+    margin: 25px;
+}
+
+h1{
+    text-align: center;
+    font-size: 100px;
+    margin: 0;
+}
+
+h2{
+    text-align: center;
+}
+
+#add-device h2{
+    position: absolute;
+}
+
+#add-device h1{
+    margin-top: 25px;
+}
+
+#add-device{
+    border-color: #0052f5;
+    border-width: 5px;
+    border-style: solid;
+    background-color: #282828;
+}
+
+.widget{
+    background-color: #0052f5;
+    border-radius: 25px;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+}
