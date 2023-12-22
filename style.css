@@ -7,10 +7,13 @@ h1{
     text-align: center;
     font-size: 100px;
     margin: 0;
+    font-weight: 200;
+    font-family: 'Roboto', 'sans-serfi';
 }
 
 h2{
     text-align: center;
+    font-family: 'Roboto', 'sans-serfi';
 }
 
 #add-device h2{
@@ -26,6 +29,7 @@ h2{
     border-width: 5px;
     border-style: solid;
     background-color: #282828;
+    flex-direction: row;
 }
 
 .widget{
@@ -34,6 +38,7 @@ h2{
     width: 250px;
     height: 150px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
