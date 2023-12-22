@@ -24,6 +24,15 @@ h2{
     margin-top: 25px;
 }
 
+#main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 25px;
+}
+
 #add-device{
     border-color: #0052f5;
     border-width: 5px;
@@ -42,10 +51,3 @@ h2{
     justify-content: center;
 }
 
-#main{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    gap: 50px;
-}
