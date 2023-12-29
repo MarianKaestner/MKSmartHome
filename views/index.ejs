@@ -12,11 +12,17 @@
 </head>
 <body>
     <div id="main">
-        <div id="add-device" class="widget">
-            <h2>Add device</h2>
-            <h1>+</h1>
-        </div>
+        <% for(let i = 0; i < deviceCounter; i++){ %>
+            <button class="widget">
+                <h2>Smart Device</h2>
+            </button>
+        <% } %>
+        <form action="/submit" method="post">
+            <button type="submit" name="add-device" id="add-device" class="widget">
+                <h2>Add device</h2>
+                <h1>+</h1>
+            </button>
+        </form>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

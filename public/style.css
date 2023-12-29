@@ -14,6 +14,7 @@ h1{
 h2{
     text-align: center;
     font-family: 'Roboto', 'sans-serfi';
+    width: 100%;
 }
 
 #add-device h2{
@@ -34,9 +35,6 @@ h2{
 }
 
 #add-device{
-    border-color: #0052f5;
-    border-width: 5px;
-    border-style: solid;
     background-color: #282828;
     flex-direction: row;
 }
@@ -49,5 +47,9 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    border-color: #0052f5;
+    border-width: 5px;
+    border-style: solid;
 }
 
