@@ -22,6 +22,10 @@ h3{
     color: white;
 }
 
+input{
+    margin-bottom: 15px;
+}
+
 #add-device h2{
     position: absolute;
 }
