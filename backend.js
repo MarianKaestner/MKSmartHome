@@ -3,7 +3,6 @@ let express = require("express");
 let parser = require("body-parser");
 app = express();
 let port = 8000;
-app.locals.deviceCounter = 0;
 app.locals.deviceList = [];
 
 function Device(pName, pAddress){
