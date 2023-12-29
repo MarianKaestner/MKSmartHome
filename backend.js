@@ -21,10 +21,6 @@ app.get("/newdevice", (req, res) => {
     res.render("deviceform.ejs");
 });
 
-app.post("/submit", (req, res) => {
-    res.redirect("http://localhost:8000/newdevice");
-});
-
 app.post("/create", (req, res) => {
     app.locals.deviceList.push(new Device(req.body.name, req.body.ipaddress));
     res.redirect("http://localhost:8000");
