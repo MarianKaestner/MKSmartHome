@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/newdevice", (req, res) => {
-    res.render("deviceform.ejs");
+    res.sendFile(path.join(__dirname, "/devicecreation.html"));
 });
 
 app.post("/create", (req, res) => {
