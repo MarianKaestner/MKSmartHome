@@ -8,7 +8,7 @@ app.locals.deviceList = [];
 
 function Device(pName, pAddress){
     this.name = pName;
-    this.address = pAdress;
+    this.address = pAddress;
 }
 
 app.use(parser.urlencoded({extended: true}));
@@ -18,9 +18,9 @@ app.get("/", (req, res) => {
     res.render("index.ejs");
 });
 
-app.get("/newdevice"), (req, res) => {
+app.get("/newdevice", (req, res) => {
     res.render("deviceform.ejs");
-}
+});
 
 app.post("/submit", (req, res) => {
     res.redirect("http://localhost:8000/newdevice");

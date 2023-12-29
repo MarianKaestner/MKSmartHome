@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>New Device</title>
 </head>
 <body>
     <form action="/create" method="post">
-        <label for="name">Name:</label>
+        <h3>Name:</h3>
         <input type="text" name="name">
         <br>
-        <label for="address">Device IP-Address:</label>
-        <input type="text" name="ipaddress">
         <button type="submit">Submit</button>
     </form>
 </body>

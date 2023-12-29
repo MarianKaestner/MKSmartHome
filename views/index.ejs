@@ -12,9 +12,9 @@
 </head>
 <body>
     <div id="main">
-        <% for(let i = 0; i < deviceCounter; i++){ %>
+        <% for(let i = 0; i < deviceList.length; i++){ %>
             <button class="widget">
-                <h2>Smart Device</h2>
+                <h2><%= deviceList[i].name %></h2>
             </button>
         <% } %>
         <form action="/submit" method="post">

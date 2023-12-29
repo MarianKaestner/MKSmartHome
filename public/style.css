@@ -17,6 +17,11 @@ h2{
     width: 100%;
 }
 
+h3{
+    font-family: 'Roboto', 'sans-serfi';
+    color: white;
+}
+
 #add-device h2{
     position: absolute;
 }
