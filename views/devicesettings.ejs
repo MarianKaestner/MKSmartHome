@@ -7,14 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>New Device</title>
+    <title><%= deviceList[currentDevice].name %> Settings</title>
 </head>
 <body>
-    <form action="/create" method="post">
+    <h1><%= deviceList[currentDevice].name %></h1>
+    <form action="/applysettings" method="post">
         <h3>Name:</h3>
         <input type="text" name="name" required>
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit">Save</button>
+    </form>
+    <form action="/delete" method="post">
+        <button type="submit">Delete Device</button>
+    </form>
+    <form action="/" method="get">
+        <button type="submit"><-Back</button>
     </form>
 </body>
 </html>

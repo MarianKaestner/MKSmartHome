@@ -6,7 +6,6 @@ body{
 h1{
     text-align: center;
     font-size: 100px;
-    margin: 0;
     font-weight: 200;
     font-family: 'Roboto', 'sans-serfi';
 }
@@ -26,14 +25,6 @@ input{
     margin-bottom: 15px;
 }
 
-#add-device h2{
-    position: absolute;
-}
-
-#add-device h1{
-    margin-top: 25px;
-}
-
 #main{
     display: flex;
     flex-direction: row;
@@ -45,7 +36,24 @@ input{
 
 #add-device{
     background-color: #282828;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-color: #0052f5;
+    border-width: 5px;
+    border-style: solid;
+}
+
+#add-device h1{
+    margin: 0;
+    margin-top: 25px;
+    position: relative;
+}
+
+#add-device h2{
+    margin: 0;
+    margin-bottom: 75px;
+    position: absolute;
 }
 
 .widget{
@@ -56,9 +64,11 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    border-color: #0052f5;
-    border-width: 5px;
-    border-style: solid;
+    align-items: center;
+}
+
+.widget .settings{
+    background-color: #0052f5;
+    border-style: none;
 }
 
