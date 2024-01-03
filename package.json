@@ -4,7 +4,9 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "init": "^0.1.2",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.0.2",
+    "ping": "^0.4.4",
     "postgresql": "^0.0.1"
   }
 }

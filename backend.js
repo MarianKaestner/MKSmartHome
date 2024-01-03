@@ -1,18 +1,21 @@
 let path = require("path");
 let express = require("express");
 let parser = require("body-parser");
+
 app = express();
 let port = 8000;
 app.locals.deviceList = [];
 app.locals.currentDevice = -1;
 
-function Device(pName, pAddress){
+function Device(pName, pAddress, pActive){
     this.name = pName;
     this.address = pAddress;
+    this.active = pActive;
 }
 
 app.use(parser.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use(express.json());
 
 app.get("/", (req, res) => {
     res.render("index.ejs");
@@ -44,6 +47,16 @@ app.post("/delete", (req, res) => {
 
 app.post("/back", (req, res)  => {
     res.redirect("/");
+});
+
+app.post("/api/toggle", async (req, res) => {
+    if(req.body.active == "true"){
+        await fetch("http://192.168.178.159/on");
+    }
+    else{
+        await fetch("http://192.168.178.159/off");
+    }
+    res.status(200).json({message: "Request successful"});
 });
 
 app.listen(port, () => {

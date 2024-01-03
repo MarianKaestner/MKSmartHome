@@ -20,12 +20,10 @@
                         <h2><%= deviceList[i].name %></h2>
                     </button>
                 </form>
-                <form action="/toggle" method="post">
                     <label class="switch">
-                        <input type="checkbox">
+                        <input onchange="toggle(this)" type="checkbox">
                         <span class="slider round"></span>
                     </label>
-                </form>
             </div>
             
         <% } %>
@@ -36,5 +34,6 @@
             </button>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

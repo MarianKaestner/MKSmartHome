@@ -1,16 +1,21 @@
+function toggle(checkbox){
+    let value;
+    if($(checkbox).prop("checked")){
+        value = "true";
+    }
+    else{
+        value = "false";
+    }
 
-//Adds new device
-$("#add-device").click(function(){
-    var node = $("<div></div>");
-    node.addClass("widget");
-    node.attr("onclick", "removeDevice(this)");
-    node.html("<h2>Smart Device</h2>");
-    $("#add-device").before(node);
-});
-
-//Removes device
-function removeDevice(e){
-    e.remove();
+    fetch("/api/toggle", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({"active" : value}),
+    })
+    .then(response => response.json())
+    .catch(error => console.error("Fehler: ", error));
 }
 
 
