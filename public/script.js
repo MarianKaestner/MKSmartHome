@@ -12,7 +12,9 @@ function toggle(checkbox){
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({"active" : value}),
+        body: JSON.stringify({
+            "active" : value,
+            "index" : $(checkbox).attr("id")})
     })
     .then(response => response.json())
     .catch(error => console.error("Fehler: ", error));

@@ -26,7 +26,7 @@ app.get("/newdevice", (req, res) => {
 });
 
 app.post("/create", (req, res) => {
-    app.locals.deviceList.push(new Device(req.body.name, req.body.ipaddress));
+    app.locals.deviceList.push(new Device(req.body.name, req.body.ip));
     res.redirect("/");
 });
 
