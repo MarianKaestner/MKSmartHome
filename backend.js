@@ -51,10 +51,10 @@ app.post("/back", (req, res)  => {
 
 app.post("/api/toggle", async (req, res) => {
     if(req.body.active == "true"){
-        await fetch("http://192.168.178.159/on");
+        await fetch("http://" + app.locals.deviceList[Number(req.body.index)].ip + "/on");
     }
     else{
-        await fetch("http://192.168.178.159/off");
+        await fetch("http://" + app.locals.deviceList[Number(req.body.index)].ip + "/off");
     }
     res.status(200).json({message: "Request successful"});
 });
