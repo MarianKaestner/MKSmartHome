@@ -9,7 +9,7 @@ app.locals.currentDevice = -1;
 
 function Device(pName, pAddress, pActive){
     this.name = pName;
-    this.address = pAddress;
+    this.ip = pAddress;
     this.active = pActive;
 }
 
