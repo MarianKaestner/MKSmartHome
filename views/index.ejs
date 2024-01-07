@@ -21,7 +21,7 @@
                     </button>
                 </form>
                     <label class="switch">
-                        <input id="<%= i %>" onchange="toggle(this)" type="checkbox">
+                        <input <%if(deviceList[i].active){%> class="checked" <% } %>id="<%= i %>" onchange="toggle(this)" type="checkbox">
                         <span class="slider round"></span>
                     </label>
             </div>
